@@ -37,8 +37,48 @@
   "overrides": [
     {
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-      "extends": ["plugin:import/recommended", "plugin:prettier/recommended"],
+      "extends": [
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+      ],
       "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "function",
+            "format": ["PascalCase", "camelCase"]
+          },
+          {
+            "selector": "variable",
+            "types": ["boolean"],
+            "format": ["PascalCase"],
+            "prefix": ["is", "should", "has", "can", "did", "will"]
+          },
+          {
+            "selector": "typeAlias",
+            "format": ["PascalCase"],
+            "prefix": ["T"]
+          },
+          {
+            "selector": "interface",
+            "format": ["PascalCase"],
+            "prefix": ["I"]
+          },
+          {
+            "selector": "enum",
+            "format": ["PascalCase"],
+            "prefix": ["E"]
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["destructured"],
+            "format": null
+          }
+        ],
         "import/order": [
           "error",
           {
