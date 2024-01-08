@@ -1,0 +1,55 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime", // disable all rules conflict with React 17 JSX transform
+    "plugin:react-hooks/recommended",
+    "eslint-config-prettier",
+    "prettier" // disable all rules conflict with Prettier
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-refresh", "prettier"], // https://eslint.org/docs/latest/use/configure/plugins#naming-convention
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": ["off"]
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "extends": ["plugin:prettier/recommended"],
+      "rules": {
+
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          },
+          {
+            "usePrettierrc": true
+          }
+        ]
+      }
+    }
+  ]
+}
