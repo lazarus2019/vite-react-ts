@@ -39,11 +39,8 @@
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
       "extends": [
         "plugin:import/recommended",
-        "plugin:import/typescript",
-        "plugin:prettier/recommended",
-        "plugin:jsx-a11y/recommended",
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended"
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
       ],
       "rules": {
         "@typescript-eslint/naming-convention": [
@@ -100,6 +97,9 @@
           }
         ],
         "import/newline-after-import": "error",
+        // "import/default": "off",
+        // "import/no-named-as-default-member": "off",
+        // "import/no-named-as-default": "off",
         "import/no-unresolved": [
           "off",
           {
