@@ -1,10 +1,9 @@
-import "./index.scss";
-import "aos/dist/aos.css";
 import "./App.css";
 
-import { useState } from "react";
-
+import { TestButton } from "@/components/button/testBtn";
 import reactLogo from "@/assets/react.svg";
+
+import { useState } from "react";
 
 import viteLogo from "/vite.svg";
 
@@ -13,6 +12,7 @@ function App() {
 
   return (
     <>
+      <TestButton />
       <div>
         <img src={viteLogo} className="logo" alt="Vite logo" />
         <img src={reactLogo} className="logo react" alt="React logo" />

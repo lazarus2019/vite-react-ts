@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint": "tsc --noEmit && eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
+    "stylelint": "stylelint --ignore-path .gitignore --fix **/*.{css,scss}",
     "preview": "vite preview",
     "prepare": "husky install",
     "commit": "git-cz"
@@ -37,7 +38,15 @@
     "git-cz": "^4.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
     "prettier": "^3.1.1",
+    "sass": "^1.69.7",
+    "stylelint": "^16.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^11.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-group-selectors": "^1.0.10",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-tsconfig-paths": "^4.2.3"
