@@ -10,7 +10,7 @@
     "eslint-config-prettier",
     "prettier" // disable all rules conflict with Prettier
   ],
-  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "ignorePatterns": ["dist", "node_modules/*"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-refresh", "prettier"], // https://eslint.org/docs/latest/use/configure/plugins#naming-convention
   "rules": {
