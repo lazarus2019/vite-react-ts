@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "tsc --noEmit && eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "tsc --noEmit && eslint --fix ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
     "stylelint": "stylelint --ignore-path .gitignore --fix **/*.{css,scss}",
     "preview": "vite preview",
@@ -46,6 +46,7 @@
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",
+    "prettier-plugin-style-order": "^0.2.2",
     "sass": "^1.69.7",
     "stylelint": "^16.1.0",
     "stylelint-config-rational-order": "^0.1.2",
